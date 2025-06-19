@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .game-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      max-width: 400px;
+    }
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f8a;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h2>Number Guessing Game</h2>
+    <p>Guess a number between 1 and 100</p>
+    <input type="number" id="guess" min="1" max="100" />
+    <br />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById('guess').value);
+      const result = document.getElementById('result');
+      attempts++;
+
+      if (userGuess === secretNumber) {
+        result.textContent = `🎉 Correct! You guessed it in ${attempts} tries.`;
+        result.style.color = 'green';
+      } else if (userGuess < secretNumber) {
+        result.textContent = 'Too low. Try again!';
+        result.style.color = 'red';
+      } else if (userGuess > secretNumber) {
+        result.textContent = 'Too high. Try again!';
+        result.style.color = 'red';
+      } else {
+        result.textContent = 'Please enter a valid number.';
+        result.style.color = 'orange';
+      }
+    }
+  </script>
+</body>
+</html>
