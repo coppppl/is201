@@ -1,56 +1,41 @@
-/* scratch.css */
-
+/* new scratch.css */
 body {
-  background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
-  background-color: #f0f8ff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: url('https://wallpapercat.com/w/full/9/1/2/209784-3840x2160-desktop-4k-harley-davidson-background-photo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+}
+
+.content-section {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom-text {
   color: #333;
 }
 
-h2, h4 {
-  color: #005f73;
-}
-
-ul, ol {
-  padding-left: 20px;
-  color: #0a0a0a;
-  font-size: 16px;
-}
-
-img {
-  border: 3px solid #94d2bd;
+.custom-div-1, .custom-div-2, .custom-div-3 {
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 15px;
   border-radius: 8px;
-  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.custom-div-1 {
-  background: #ffc;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.custom-div-2 {
-  background: #cfc;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.custom-div-3 {
-  background: #ccf;
-  padding: 10px;
-}
-
-iframe {
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-a {
-  color: #0077b6;
+nav a {
+  display: inline-block;
+  margin: 20px;
+  font-weight: 500;
+  color: #000;
   text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
   text-decoration: underline;
 }
+
